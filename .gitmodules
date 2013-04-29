@@ -7,3 +7,6 @@
 [submodule "modules/puppetlabs-ruby"]
 	path = modules/puppetlabs-ruby
 	url = https://github.com/puppetlabs/puppetlabs-ruby.git
+[submodule "modules/fsalum-redis"]
+	path = modules/fsalum-redis
+	url = https://github.com/fsalum/puppet-redis

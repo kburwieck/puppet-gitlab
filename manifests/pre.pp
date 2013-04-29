@@ -106,21 +106,17 @@ class gitlab::debian_packages {
   }
 
   package {
-    ['git','git-core','wget','curl','redis-server',
+    ['git','git-core','wget','curl',
       'openssh-server','python-pip','libicu-dev','python2.7',
       'libxml2-dev','libxslt1-dev','python-dev','postfix']:
         ensure  => installed;
   }
 
-  # Latest ? (on squeeze)
+  # Manage ruby (Latest ? on squeeze)
   class { 'ruby': version => '1.9.3' }
   class { 'ruby::dev': }
 
-  service {
-    'redis-server':
-      ensure  => running,
-      enable  => true,
-      require => Package['redis-server'];
-  }
+  # Manage redis server
+  class { 'redis': }
 
 } # Class:: gitlab::debian_packages
