@@ -106,7 +106,7 @@ class gitlab::debian_packages {
   }
 
   package {
-    ['git','git-core','wget','curl',
+    ['wget','curl',
       'openssh-server','python-pip','libicu-dev','python2.7',
       'libxml2-dev','libxslt1-dev','python-dev','postfix']:
         ensure  => installed;
@@ -118,5 +118,8 @@ class gitlab::debian_packages {
 
   # Manage redis server
   class { 'redis': }
+
+  # Manage git
+  class { 'git': }
 
 } # Class:: gitlab::debian_packages

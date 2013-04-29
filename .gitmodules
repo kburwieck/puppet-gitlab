@@ -10,3 +10,6 @@
 [submodule "modules/fsalum-redis"]
 	path = modules/fsalum-redis
 	url = https://github.com/fsalum/puppet-redis
+[submodule "modules/puppetlabs-git"]
+	path = modules/puppetlabs-git
+	url = https://github.com/puppetlabs/puppetlabs-git.git
